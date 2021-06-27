@@ -1,21 +1,29 @@
-package com.first.begin;
+package com.first.begin.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import javax.annotation.Resource;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.first.begin.service.HomeService;
 
 /**
  * Handles requests for the application home page.
  */
 @Controller
 public class HomeController {
+	
+	@Resource(name="homeService")
+	private HomeService homeService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -36,4 +44,10 @@ public class HomeController {
 		return "home";
 	}
 	
+	@RequestMapping("/sample.bgn")
+	public String sampleView() throws Exception{
+		//@PostMapping 어노테이션은 스프링 4.3부터 사용가능
+		System.out.println(homeService.selectSamepleData());
+		return "/jsp/sample";
+	}
 }

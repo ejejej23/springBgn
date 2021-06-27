@@ -7,12 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<strong>20210613 index.jsp 한글확인</strong>
-	
-	<div>
-        <form action="/begin/sample.bgn" method="post">
-            <button onclick="submit">처음 만든 버튼</button>
-        </form>
-    </div>
+<h1>
+    Begin Project!  
+</h1>
+<P>  "처음 만든 버튼"을 누르셨습니다! </P>
 </body>
 </html>
