@@ -47,7 +47,6 @@ public class HomeController {
 	@RequestMapping("/sample.bgn")
 	public String sampleView() throws Exception{
 		//@PostMapping 어노테이션은 스프링 4.3부터 사용가능
-		//커밋테스트
 		System.out.println(homeService.selectSamepleData());
 		return "/jsp/sample";
 	}
