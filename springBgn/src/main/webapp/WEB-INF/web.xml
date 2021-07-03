@@ -43,7 +43,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>bgn</servlet-name>
-		<url-pattern>*.bgn</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
 
